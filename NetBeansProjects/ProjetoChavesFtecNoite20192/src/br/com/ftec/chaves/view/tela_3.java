@@ -5,6 +5,9 @@
  */
 package br.com.ftec.chaves.view;
 
+import br.com.ftec.chaves.model.Sala;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author bernadete.abegg
@@ -60,6 +63,12 @@ public class tela_3 extends javax.swing.JFrame {
         lbtipo.setForeground(new java.awt.Color(255, 255, 255));
         lbtipo.setText("Tipo");
 
+        tfsala.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfsalaActionPerformed(evt);
+            }
+        });
+
         tfdescr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfdescrActionPerformed(evt);
@@ -68,6 +77,11 @@ public class tela_3 extends javax.swing.JFrame {
 
         btnsalvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnsalvar.setText("Salvar");
+        btnsalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalvarActionPerformed(evt);
+            }
+        });
 
         btncancelar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btncancelar.setText("Cancelar");
@@ -140,6 +154,25 @@ public class tela_3 extends javax.swing.JFrame {
     private void tfdescrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfdescrActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfdescrActionPerformed
+
+    private void btnsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalvarActionPerformed
+        // Sala sal
+        Sala sala = new Sala();
+        sala.setSala(tfsala.getText());
+        sala.setCapacidade(tfcapac.getText());
+        sala.setDescricao(tfdescr.getText());
+        sala.setTipo(tftipo.getText());
+        String mensagem = "sala:"+sala.getSala( )+
+        "\n capacidade:"+sala.getCapacidade()+
+        "\n tipo:"+sala.getTipo( )+
+        "\n OBS:"+sala.getDescricao()+
+        "\n \n Salvo com Sucesso!";
+        JOptionPane.showMessageDialog(null,mensagem);
+    }//GEN-LAST:event_btnsalvarActionPerformed
+
+    private void tfsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfsalaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfsalaActionPerformed
 
     /**
      * @param args the command line arguments
