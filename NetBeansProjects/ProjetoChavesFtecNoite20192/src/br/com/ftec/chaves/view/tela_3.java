@@ -167,9 +167,17 @@ public class tela_3 extends javax.swing.JFrame {
         "\n tipo:"+sala.getTipo( )+
         "\n OBS:"+sala.getDescricao()+
         "\n \n Salvo com Sucesso!";
-        JOptionPane.showMessageDialog(null,mensagem);
+        int confirma = JOptionPane.showConfirmDialog(this,"Deseja Salvar os"+ 
+                "dados da seguinte sala \n"+mensagem);
+        if(confirma==JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(this,"Salvo com Sucesso");
+        }else if(confirma == JOptionPane.NO_OPTION){
+            JOptionPane.showMessageDialog(this,"Operacao cancelada");
+        Principal p = new Principal();
+        p.setVisible(true);
+                }else{           
     }//GEN-LAST:event_btnsalvarActionPerformed
-
+}
     private void tfsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfsalaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfsalaActionPerformed
