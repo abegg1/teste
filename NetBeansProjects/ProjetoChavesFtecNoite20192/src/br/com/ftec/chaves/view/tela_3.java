@@ -171,6 +171,7 @@ public class tela_3 extends javax.swing.JFrame {
                 "dados da seguinte sala \n"+mensagem);
         if(confirma==JOptionPane.YES_OPTION){
             JOptionPane.showMessageDialog(this,"Salvo com Sucesso");
+            txtCapaci
         }else if(confirma == JOptionPane.NO_OPTION){
             JOptionPane.showMessageDialog(this,"Operacao cancelada");
         Principal p = new Principal();
