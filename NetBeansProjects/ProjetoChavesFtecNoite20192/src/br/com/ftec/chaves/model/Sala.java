@@ -13,8 +13,9 @@ public class Sala {
 
     private String sala;
     private String descricao;
-    private String capacidade;
+    private int capacidade;
     private String tipo;
+    private int id;
 
     public String getSala() {
         return sala;
@@ -24,8 +25,24 @@ public class Sala {
         return descricao;
     }
 
-    public String getCapacidade() {
+    public int getCapacidade() {
         return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    
+
+    
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTipo() {
@@ -40,9 +57,7 @@ public class Sala {
         this.descricao = descricao;
     }
 
-    public void setCapacidade(String capacidade) {
-        this.capacidade = capacidade;
-    }
+    
 
     public void setTipo(String tipo) {
         this.tipo = tipo;

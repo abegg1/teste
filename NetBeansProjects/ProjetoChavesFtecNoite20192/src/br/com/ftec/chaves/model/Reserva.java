@@ -10,11 +10,19 @@ package br.com.ftec.chaves.model;
  * @author bernadete.abegg
  */
 public class Reserva {
-    private String sala;
+    private Sala sala;
     private String turno;
     private String dia;
+    private Colaborador colaborador;
 
-    public String getSala() {
+    public Reserva(Sala sala, String turno, String dia, Colaborador colaborador) {
+        this.sala = sala;
+        this.turno = turno;
+        this.dia = dia;
+        this.colaborador = colaborador;
+    }
+
+    public Sala getSala() {
         return sala;
     }
 
@@ -26,7 +34,11 @@ public class Reserva {
         return dia;
     }
 
-    public void setSala(String sala) {
+    public Colaborador getColaborador() {
+        return colaborador;
+    }
+
+    public void setSala(Sala sala) {
         this.sala = sala;
     }
 
@@ -38,5 +50,13 @@ public class Reserva {
         this.dia = dia;
     }
 
+    public void setColaborador(Colaborador colaborador) {
+        this.colaborador = colaborador;
+    }
+
+    
+    
+
+    
     
 }

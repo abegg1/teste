@@ -40,7 +40,7 @@ public class tela_4 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Sala");
 
         jLabel2.setText("jLabel2");
 

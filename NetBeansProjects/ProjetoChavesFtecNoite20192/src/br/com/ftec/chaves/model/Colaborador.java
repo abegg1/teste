@@ -12,9 +12,36 @@ package br.com.ftec.chaves.model;
 public class Colaborador {
    private String nome;
    private String cpf;
-   private String senha;
+   private String senha; 
+   private String telefone;
    private String email;
+   private int id;
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Colaborador(String nome, String cpf, String senha, String telefone, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+   
+   
     public String getNome() {
         return nome;
     }
