@@ -53,8 +53,7 @@ public class Reserva {
     public void setColaborador(Colaborador colaborador) {
         this.colaborador = colaborador;
     }
-
-    
+  
     
 
     
